@@ -88,3 +88,92 @@
 // #region Features
 
 // #endregion
+
+// #region Content Box
+.content-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+
+  p {
+    max-width: 400px;
+  }
+
+  swiper-container {
+    height: 500px;
+    max-width: 600px !important;
+
+    @include media('<desktop') {
+      height: 400px;
+      width: 100%;
+    }
+  }
+
+  swiper-slide {
+    background-size: cover;
+  }
+
+  swiper-slide:nth-of-type(1) {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url("../../../../public/assets/stock-7.jpeg");
+    background-color: red;
+  }
+  
+  swiper-slide:nth-of-type(2) {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url("../../../../public/assets/stock-1.jpeg");
+    background-color: green;
+  }
+  
+  swiper-slide:nth-of-type(3) {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url("../../../../public/assets/stone-oak.jpeg");
+    background-color: blue;
+    color: white;
+  }
+  
+  swiper-slide:nth-of-type(4) {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url("../../../../public/assets/pb-bowl-pic.jpeg");
+    background-color: yellow;
+  }
+
+  @include media('<desktop') {
+    flex-direction: column;
+  }
+}
+
+.text-box {
+  flex: 1;
+  padding: 20px;
+
+  h2 {
+    margin-top: 0;
+    color: black;
+  }
+
+  p {
+    color: black;
+    line-height: 1.6;
+  }
+}
+
+.image-box {
+  flex: 1;
+  text-align: right;
+
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+
+    @include media('<desktop') {
+      max-width: 100%;
+      width: 500px;
+    }
+  }
+}
+// #endregion

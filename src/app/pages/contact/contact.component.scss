@@ -1,2 +1,115 @@
 @import '../../../variables.scss';
 @import 'include-media';
+
+//Contact Form
+.contact-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 10px;
+  gap: 20px;
+  animation: fadeInAndSlideInBottom 0.5s linear;
+
+  @include media('<desktop') {
+    margin: 25px auto;
+  }
+}
+
+.image {
+  img {
+    max-width: 700px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: -15px 15px 8px rgba(0, 0, 0, 0.4);
+
+    @include media('<desktop') {
+      box-shadow: -5px 5px 4px rgba(0, 0, 0, 0.4);
+      width: 100%;
+    }
+  }
+}
+
+.contact-form {
+  position: relative;
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+
+  button {
+    background-color: $theme-color-main;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    transition: background-color 0.2s ease;
+    transition: 0.2s linear;
+
+    &:hover {
+      background-color: $theme-color-main-shadow;
+    }
+
+    &:active {
+      transform: translateY(5px);
+    }
+  }
+
+  p {
+    text-align: center;
+    font-weight: 1rem;
+  }
+}
+
+.contact-form-title {
+  font-size: 2rem;
+  color: $theme-color-main;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+
+  label {
+    display: block;
+    font-size: 1em;
+    color: black;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+  &:focus {
+    border-color: $theme-color-main;
+    outline: none;
+  }
+}
+
+mat-spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: $theme-color-main;
+}
+// #endregion
