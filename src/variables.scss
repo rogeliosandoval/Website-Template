@@ -1,0 +1,32 @@
+$theme-color-main: blue;
+$theme-color-main-shadow: darkblue;
+
+.active {
+  color: $theme-color-main;
+  transform: translateY(-3px);
+}
+
+.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.fade {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+a {
+  text-decoration: none;
+  color: $theme-color-main;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fadeInAndSlideInBottom {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
