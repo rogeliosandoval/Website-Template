@@ -1,0 +1,90 @@
+@import '../../../variables.scss';
+@import 'include-media';
+
+.container {
+  position: relative;
+  max-width: 1920px;
+  margin: auto;
+}
+
+// #region Landing Swiper
+.overlay-swiper-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4rem;
+  color: green;
+  z-index: 2;
+}
+
+.landing-swipe {
+  position: relative;
+
+  swiper-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    background-size: cover;
+    height: 500px;
+    z-index: -1;
+  }
+  
+  .slider-titles {
+    display: flex;
+    justify-content: column;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+    background: rgba(0, 0, 0, 0.535);
+    padding: 40px;
+    border-radius: 20px;
+    animation: fadeInAndSlideInBottom 0.5s linear;
+  }
+  
+  .slide-title {
+    font-size: 4rem;
+    color: white;
+  
+    @include media('<desktop') {
+      font-size: 2rem;
+    }
+  }
+  
+  .slide-subtitle {
+    font-size: 2rem;
+    color: white;
+  
+    @include media('<desktop') {
+      font-size: 1.3rem;
+    }
+  }
+  
+  swiper-slide:nth-of-type(1) {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url("../../../../public/assets/stock-7.jpeg");
+    background-color: red;
+  }
+  
+  swiper-slide:nth-of-type(2) {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url("../../../../public/assets/stock-1.jpeg");
+    background-color: green;
+  }
+  
+  swiper-slide:nth-of-type(3) {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url("../../../../public/assets/stone-oak.jpeg");
+    background-color: blue;
+    color: white;
+  }
+  
+  swiper-slide:nth-of-type(4) {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url("../../../../public/assets/pb-bowl-pic.jpeg");
+    background-color: yellow;
+  }
+}
+// #endregion
+
+// #region Features
+
+// #endregion
