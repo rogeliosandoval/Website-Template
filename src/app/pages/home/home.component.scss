@@ -7,21 +7,139 @@
   margin: auto;
 }
 
-// #region Landing Swiper
-.overlay-swiper-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 4rem;
-  color: green;
-  z-index: 2;
+// #region CTA
+.container {
+  position: relative;
+  max-width: 1920px;
+  margin: auto;
+  animation: fadeInAndSlideInBottom 0.5s linear;
 }
 
-.landing-swipe {
+.cta {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 600px;
+
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @include media('<desktop') {
+    max-height: 500px;
+  }
+}
+
+.cta-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.cta-title {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 30px;
+  flex-direction: column;
+  z-index: 1;
+  margin-top: 50px;
+  gap: 10px;
+  color: white;
+  text-align: center;
+  font-family: "Anton SC", sans-serif;
+
+  h1 {
+    font-size: 3.5rem;
+    font-family: "Anton SC", sans-serif;
+    letter-spacing: 3px;
+    line-height: 5.2rem;
+    margin: 0;
+    padding: 0;
+
+    @include media('<desktop') {
+      font-size: 1.8rem;
+      line-height: 3rem;
+    }
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    max-width: 1000px;
+    margin: 0;
+    padding: 0;
+
+    @include media('<desktop') {
+      font-size: 1rem;
+      line-height: 1.5rem;
+    }
+  }
+
+  button {
+    width: 250px;
+    background-color: $theme-color-main;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 15px 20px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 10px;
+    transition: 0.1s linear;
+    text-transform: uppercase;
+
+    &:hover {
+      cursor: pointer;
+      background-color: $theme-color-main-shadow;
+    }
+
+    &:active {
+      transform: translateY(3px);
+    }
+
+    @include media('<desktop') {
+      font-size: 0.8rem;
+      width: 200px;
+    }
+  }
+
+  // @media screen and (max-width: 1499px) {
+  //   margin-top: 100px;
+  // }
+
+  @include media('<desktop') {
+    font-size: 2rem;
+    gap: 20px;
+    margin-top: 50px;
+  }
+}
+
+.cta-subtitle {
+  font-size: 2rem;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+
+  @include media('<desktop') {
+    font-size: 1.3rem;
+  }
+}
+// #endregion
+
+// #region Landing Swiper
+.landing-swiper {
   position: relative;
 
   swiper-slide {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -64,33 +182,34 @@
   
   swiper-slide:nth-of-type(1) {
     background-image: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url("../../../../public/assets/stock-7.jpeg");
-    background-color: red;
   }
   
   swiper-slide:nth-of-type(2) {
     background-image: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url("../../../../public/assets/stock-1.jpeg");
-    background-color: green;
   }
   
   swiper-slide:nth-of-type(3) {
     background-image: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url("../../../../public/assets/stone-oak.jpeg");
-    background-color: blue;
-    color: white;
   }
   
   swiper-slide:nth-of-type(4) {
     background-image: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url("../../../../public/assets/pb-bowl-pic.jpeg");
-    background-color: yellow;
   }
+}
+
+.landing-swiper-fixed-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4rem;
+  color: green;
+  z-index: 2;
 }
 // #endregion
 
-// #region Features
-
-// #endregion
-
-// #region Content Box
-.content-box {
+// #region Swiper Box
+.swiper-box {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -122,23 +241,18 @@
 
   swiper-slide:nth-of-type(1) {
     background-image: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url("../../../../public/assets/stock-7.jpeg");
-    background-color: red;
   }
   
   swiper-slide:nth-of-type(2) {
     background-image: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url("../../../../public/assets/stock-1.jpeg");
-    background-color: green;
   }
   
   swiper-slide:nth-of-type(3) {
     background-image: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url("../../../../public/assets/stone-oak.jpeg");
-    background-color: blue;
-    color: white;
   }
   
   swiper-slide:nth-of-type(4) {
     background-image: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url("../../../../public/assets/pb-bowl-pic.jpeg");
-    background-color: yellow;
   }
 
   @include media('<desktop') {
@@ -146,7 +260,7 @@
   }
 }
 
-.text-box {
+.swiper-box-text {
   flex: 1;
   padding: 20px;
 
@@ -160,20 +274,178 @@
     line-height: 1.6;
   }
 }
+// #endregion
 
-.image-box {
-  flex: 1;
-  text-align: right;
+// region Info Image Block
+.info-image-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 600px;
+  background-color: white;
+
+  @include media('<desktop') {
+    flex-direction: column;
+    height: auto;
+  }
+}
+
+.info-image-block__sm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: $theme-color-main;
+  color: white;
+  margin-top: 20px;
+  transition: 0.2s linear;
+  font-family: "Anton SC", sans-serif;
 
   img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
+    max-width: 80px;
 
     @include media('<desktop') {
-      max-width: 100%;
-      width: 500px;
+      max-width: 40px;
     }
+  }
+
+  span {
+    font-weight: bold;
+    font-size: 1.7rem;
+
+    @include media('<desktop') {
+      font-size: 1rem;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+
+  @include media('<desktop') {
+    margin-bottom: 20px;
+  }
+}
+
+.info-image-block__image {
+  flex: 1;
+  height: 100%;
+  // background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../../../../public/assets/stock-1.jpeg");
+  // background-size: contain;
+  // background-position: right;
+  // background-attachment: fixed;
+  // filter:saturate(120%);
+  // border: 6px inset black;
+  // box-sizing: border-box;
+  // min-height: 225px;
+
+  img, video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(90%);
+    filter:saturate(120%);
+    border: 6px inset black;
+    box-sizing: border-box;
+
+    @include media('<desktop') {
+      max-height: 200px;
+    }
+  }
+
+  @include media('<desktop') {
+    flex: none;
+    width: 100%;
+  }
+}
+
+.info-image-block__text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex: 1;
+  box-sizing: border-box;
+  padding: 10px;
+
+  h3, h4 {
+    font-size: 1.7rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 30px;
+    color: $theme-color-main;
+    font-family: "Bebas Neue", sans-serif;
+
+    @include media('<desktop') {
+      font-size: 1rem;
+      margin: 0;
+      line-height: 2rem;
+    }
+  }
+
+  p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    text-align: center;
+    color: #666;
+
+    @include media('<desktop') {
+      font-size: 1rem;
+      padding: 10px;
+      text-align: left;
+    }
+  }
+
+  a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+
+    strong {
+      letter-spacing: none;
+      margin-bottom: 10px;
+
+      @include media('<desktop') {
+        font-size: 1rem;
+      }
+    }
+
+    @include media('<desktop') {
+      margin-top: 0;
+    }
+  }
+
+  @include media('<desktop') {
+    padding: 20px 10px;
+    flex: none;
+    width: 100%;
+  }
+}
+
+.info-image-block__number {
+  background-color: #eff3c5;
+  padding: 20px 30px;
+  font-weight: bold;
+  text-decoration: underline;
+  font-size: 2rem;
+  transition: 0.2s linear;
+  border-radius: 10px;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  @include media('<desktop') {
+    font-size: 1.1rem;
+    margin-top: 0;
+    padding: 10px 15px;
   }
 }
 // #endregion
