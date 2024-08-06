@@ -34,10 +34,12 @@ export class Contact {
   private http = inject(HttpClient)
   private matSnack = inject(MatSnackBar)
   public sending: boolean = false
+  public messageSent: boolean = false
 
   public sendMessage(): void {
     this.sending = true
     setTimeout(() => {
+      this.messageSent = true
       this.contactForm.reset()
       this.formRef.resetForm()
       this.sending = false;
