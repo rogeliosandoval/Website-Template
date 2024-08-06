@@ -21,7 +21,7 @@ nav {
       border-radius: 5px;
       color: white;
       padding: 5px;
-      z-index: 3;
+      z-index: 4;
     }
   }
 
@@ -40,8 +40,8 @@ nav {
   height: 100%;
   width: 100%;
   top: 0;
-  background-color: rgba(0, 0, 0, 0.564);
-  z-index: 1;
+  background-color: black;
+  z-index: 3;
   animation: fadeIn 0.1s linear;
 }
 
