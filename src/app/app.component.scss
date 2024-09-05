@@ -50,10 +50,6 @@ nav {
   color: white;
 }
 
-.mobile-nav-spacer {
-  margin-bottom: 300px;
-}
-
 .nav-links {
   display: flex;
   justify-content: center;
@@ -106,16 +102,22 @@ nav {
 .footer {
   background-color: #333;
   color: #fff;
-  padding: 20px 0;
+  padding: 20px 0 0;
 }
 
 .footer-container {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  flex-wrap: wrap;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  gap: 60px;
+  padding: 50px;
+
+  @include media('<desktop') {
+    justify-content: center;
+  }
 }
 
 .footer-column {
@@ -124,24 +126,6 @@ nav {
 
   h4 {
     margin-top: 0;
-  }
-
-  ul {
-    list-style: none;
-    padding: 0;
-  }
-
-  ul li {
-    margin-bottom: 10px;
-  }
-
-  ul li a {
-    color: #fff;
-    text-decoration: none;
-  }
-
-  ul li a:hover {
-    text-decoration: underline;
   }
 }
 
@@ -152,4 +136,19 @@ nav {
 .footer-logo {
   max-width: 100%;
   height: auto;
+}
+
+.copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+  background-color: gray;
+  font-size: 0.9rem;
+  letter-spacing: 0;
+
+  a {
+    font-weight: bold;
+  }
 }
