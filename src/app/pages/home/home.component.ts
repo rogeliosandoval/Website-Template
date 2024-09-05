@@ -1,6 +1,4 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA, ElementRef, inject, OnInit, ViewChild } from '@angular/core'
-import { SwiperContainer } from 'swiper/element'
-import { SwiperOptions } from 'swiper/types'
 import { RouterOutlet, RouterLink} from '@angular/router'
 import { Meta, Title } from '@angular/platform-browser'
 
@@ -19,13 +17,6 @@ import { Meta, Title } from '@angular/platform-browser'
 export class Home implements OnInit {
   private meta = inject(Meta)
   private titleService = inject(Title)
-  @ViewChild('swiper') swiper!: ElementRef<SwiperContainer>
-  public config: SwiperOptions = {
-    autoplay: {
-      delay: 7000,
-      disableOnInteraction: true
-    }
-  }
 
   ngOnInit(): void {
     this.titleService.setTitle('PVD Solutions | Handyman Services Rhode Island')

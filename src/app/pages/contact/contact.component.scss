@@ -11,7 +11,6 @@
   padding: 20px;
   border-radius: 10px;
   gap: 20px;
-  animation: fadeInAndSlideInBottom 0.5s linear;
 
   @include media('<desktop') {
     margin: 25px auto;

@@ -5,16 +5,10 @@
   position: relative;
   max-width: 1920px;
   margin: auto;
+  overflow: hidden;
 }
 
 // #region CTA
-.container {
-  position: relative;
-  max-width: 1920px;
-  margin: auto;
-  animation: fadeInAndSlideInBottom 0.5s linear;
-}
-
 .cta {
   position: relative;
   display: flex;
@@ -813,7 +807,6 @@
   justify-content: center;
   padding: 20px;
   text-align: center;
-  animation: float 2s ease-in-out infinite;
 
   .content-box {
     background: #f9f9f9;

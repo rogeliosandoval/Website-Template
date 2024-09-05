@@ -1,4 +1,4 @@
-import { Component, ViewChild, inject } from '@angular/core'
+import { Component, OnInit, ViewChild, inject } from '@angular/core'
 import { ReactiveFormsModule, FormsModule } from '@angular/forms'
 import { FormGroup, FormControl, Validators } from '@angular/forms'
 import { MatSnackBar } from '@angular/material/snack-bar'
@@ -6,6 +6,8 @@ import { HttpClient } from '@angular/common/http'
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
 import { MatSnackBarModule } from '@angular/material/snack-bar'
 import { HttpClientModule } from '@angular/common/http'
+import { Meta, Title } from '@angular/platform-browser'
+import { RouterOutlet, RouterLink} from '@angular/router'
 
 @Component({
   selector: 'app-contact',
@@ -15,13 +17,15 @@ import { HttpClientModule } from '@angular/common/http'
     FormsModule,
     MatProgressSpinnerModule,
     MatSnackBarModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterOutlet,
+    RouterLink
   ],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
 
-export class Contact {
+export class Contact implements OnInit {
   @ViewChild('formRef') formRef: any
   public contactForm = new FormGroup({
     access_key: new FormControl('12ee3a8d-fb2b-466e-a975-4f6b29a0887d'),
@@ -35,6 +39,16 @@ export class Contact {
   private matSnack = inject(MatSnackBar)
   public sending: boolean = false
   public messageSent: boolean = false
+  private meta = inject(Meta)
+  private titleService = inject(Title)
+
+  ngOnInit(): void {
+    this.titleService.setTitle('PVD Solutions | Handyman Services Rhode Island')
+    this.meta.updateTag({ property: 'og:image', content: 'https://pvd-solutions.com/assets/banner.png' }, "property='og:image'")
+    this.meta.updateTag({ property: 'og:title', content: 'Handyman Services Rhode Island | PVD Solutions' }, "property='og:title'")
+    this.meta.updateTag({ property: 'og:url', content: 'https://pvd-solutions.com/' })
+    this.meta.updateTag({ property: 'og:description', content: 'Handyman repairs, comprehensive remodeling and thorough cleaning services.' }, "property='og:description'")
+  }
 
   public sendMessage(): void {
     this.sending = true
@@ -48,8 +62,10 @@ export class Contact {
         verticalPosition: 'top',
         horizontalPosition: 'center'
       })
+
       // this.http.post(this.url, this.contactForm.value).subscribe({
       //   next: response => {
+      //     this.messageSent = true
       //     this.contactForm.reset()
       //     this.formRef.resetForm()
       //     this.sending = false

@@ -1,6 +1,7 @@
 <div class="container">
 
   <section class="cta">
+    <!--[controls]="true"-->
     <video [muted]="'muted'" autoplay loop playsInline>
       <source src="assets/videos/junk-yard.mp4" type="video/mp4"/>
     </video>
@@ -18,7 +19,7 @@
     <div class="landing-swiper-fixed-text">
       Swiper Text That Stays On All
     </div>
-    <swiper-container #swiper autoplay="true" [config]="config">
+    <swiper-container autoplay="true" autoplay-delay="2700" effect="coverflow" pagination="true" navigation="true" autoplay-disable-on-interaction="true" duration>
       <swiper-slide>
         <!-- <div class="slider-titles">
           <div class="slide-title">
@@ -35,7 +36,7 @@
     </swiper-container>
   </section>
 
-  <section class="info-image-block" data-aos="zoom-out-down" data-aos-duration="2000">
+  <section class="info-image-block" data-aos="fade-in" data-aos-duration="1000" data-aos-once="true">
     <div class="info-image-block__image">
       <img src="/assets/stock-7.jpeg" alt="Image Alt">
     </div>
@@ -62,7 +63,7 @@
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin euismod, nisl eget consectetur gravida, nisi sem euismod nisi, vitae gravida nisi nisl eget nisl.
       </p>
     </div>
-    <swiper-container appSwiper #swiper autoplay="true" [config]="config" effect="cube" pagination="true">
+    <swiper-container autoplay="true" effect="cube" pagination="true">
       <swiper-slide><span style="visibility: hidden;">testing</span></swiper-slide>
       <swiper-slide></swiper-slide>
       <swiper-slide></swiper-slide>
@@ -77,7 +78,7 @@
     </div>
     <div class="two-blocks-container">
       <div class="block block-one">
-        <swiper-container appSwiper #swiper autoplay="true" [config]="config" effect="coverflow" pagination="true" navigation="true">
+        <swiper-container autoplay="true" effect="coverflow" pagination="true" navigation="true">
           <swiper-slide></swiper-slide>
           <swiper-slide></swiper-slide>
           <swiper-slide></swiper-slide>
@@ -88,7 +89,7 @@
         <p>PVD Solutions recently had the pleasure of transforming a local salon into a modern, stylish, and functional space. Our expert team worked closely with the salon owner to create an inviting atmosphere that truly reflects their brand and ensures client comfort. The remodel included optimizing the layout, enhancing lighting, and incorporating high-quality, durable materials throughout the salon. From updating the reception area and styling stations to revitalizing the treatment rooms, every detail was meticulously planned and executed. Based in Providence, Rhode Island, and serving the surrounding areas, we completed this salon remodel with minimal disruption to the business, resulting in a stunning space that elevates the overall client experience.</p>
       </div>
       <div class="block block-two">
-        <swiper-container appSwiper #swiper autoplay="true" [config]="config" effect="coverflow" pagination="true" navigation="true">
+        <swiper-container autoplay="true" effect="coverflow" pagination="true" navigation="true">
           <swiper-slide></swiper-slide>
           <swiper-slide></swiper-slide>
           <swiper-slide></swiper-slide>
@@ -195,16 +196,16 @@
 
   <section class="floating-image-section">
     <div class="float-text-content">
-        <img src="assets/pb-bowl-pic.jpeg" alt="Placeholder Image" class="floating-image">
-        <h2>Lorem Ipsum Dolor Sit Amet</h2>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet accumsan arcu. Integer vel urna et justo convallis vehicula. Sed nec lectus sit amet arcu pellentesque ultrices. Nulla facilisi. Morbi dictum libero nec magna sagittis, at dapibus sem facilisis. Proin cursus justo id risus posuere, eget egestas eros interdum.
-        </p>
-        <p>
-            Ut ultrices velit quis erat vehicula, a dapibus purus sagittis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Curabitur in augue urna. Praesent vel urna justo. Duis ac neque nec libero convallis venenatis. Sed ac tortor vel velit cursus varius nec et sapien.
-        </p>
-        <p>
-          Ut ultrices velit quis erat vehicula, a dapibus purus sagittis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Curabitur in augue urna. Praesent vel urna justo. Duis ac neque nec libero convallis venenatis. Sed ac tortor vel velit cursus varius nec et sapien. Ut ultrices velit quis erat vehicula, a dapibus purus sagittis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Curabitur in augue urna. Praesent vel urna justo. Duis ac neque nec libero convallis venenatis. Sed ac tortor vel velit cursus varius nec et sapien.
+      <img src="assets/pb-bowl-pic.jpeg" alt="Placeholder Image" class="floating-image">
+      <h2>Lorem Ipsum Dolor Sit Amet</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet accumsan arcu. Integer vel urna et justo convallis vehicula. Sed nec lectus sit amet arcu pellentesque ultrices. Nulla facilisi. Morbi dictum libero nec magna sagittis, at dapibus sem facilisis. Proin cursus justo id risus posuere, eget egestas eros interdum.
+      </p>
+      <p>
+        Ut ultrices velit quis erat vehicula, a dapibus purus sagittis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Curabitur in augue urna. Praesent vel urna justo. Duis ac neque nec libero convallis venenatis. Sed ac tortor vel velit cursus varius nec et sapien.
+      </p>
+      <p>
+        Ut ultrices velit quis erat vehicula, a dapibus purus sagittis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Curabitur in augue urna. Praesent vel urna justo. Duis ac neque nec libero convallis venenatis. Sed ac tortor vel velit cursus varius nec et sapien. Ut ultrices velit quis erat vehicula, a dapibus purus sagittis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Curabitur in augue urna. Praesent vel urna justo. Duis ac neque nec libero convallis venenatis. Sed ac tortor vel velit cursus varius nec et sapien.
       </p>
     </div>
   </section>
