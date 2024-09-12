@@ -1,13 +1,6 @@
 @import '../../../variables.scss';
 @import 'include-media';
 
-.container {
-  position: relative;
-  max-width: 1920px;
-  margin: auto;
-  overflow: hidden;
-}
-
 // #region CTA
 .cta {
   position: relative;
