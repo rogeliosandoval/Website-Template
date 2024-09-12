@@ -23,12 +23,21 @@ export class AppComponent implements OnInit {
   private meta = inject(Meta)
   private titleService = inject(Title)
 
+  public updateMetaTags(): void {
+    this.titleService.setTitle('Chubby Designs | Website Design in San Antonio TX')
+
+    // Standard Meta Tags
+    this.meta.addTag({ name: 'description', content: 'Website design at a realistic cost that is more affordable and straight forward. No money down or contract whatsoever! Contact us today to get started.' })
+
+    // Open Graph Meta Tags
+    this.meta.addTag({ property: 'og:title', content: 'Handyman Services Rhode Island | PVD Solutions' })
+    this.meta.addTag({ property: 'og:image', content: 'https://pvd-solutions.com/assets/banner.png' })
+    this.meta.addTag({ property: 'og:description', content: 'Handyman repairs, comprehensive remodeling and thorough cleaning services.' })
+    this.meta.addTag({ property: 'og:url', content: 'https://pvd-solutions.com/' })
+  }
+
   ngOnInit(): void {
-    this.titleService.setTitle('PVD Solutions | Handyman Services Rhode Island')
-    this.meta.updateTag({ property: 'og:image', content: 'https://pvd-solutions.com/assets/banner.png' }, "property='og:image'")
-    this.meta.updateTag({ property: 'og:title', content: 'Handyman Services Rhode Island | PVD Solutions' }, "property='og:title'")
-    this.meta.updateTag({ property: 'og:url', content: 'https://pvd-solutions.com/' })
-    this.meta.updateTag({ property: 'og:description', content: 'Handyman repairs, comprehensive remodeling and thorough cleaning services.' }, "property='og:description'")
+    this.updateMetaTags()
   }
 
   public openNav(): void {

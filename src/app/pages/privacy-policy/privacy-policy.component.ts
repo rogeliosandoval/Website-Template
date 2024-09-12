@@ -18,10 +18,11 @@ export class PrivacyPolicy implements OnInit {
   private titleService = inject(Title)
 
   ngOnInit(): void {
-    this.titleService.setTitle('PVD Solutions | Handyman Services Rhode Island')
-    this.meta.updateTag({ property: 'og:image', content: 'https://pvd-solutions.com/assets/banner.png' }, "property='og:image'")
-    this.meta.updateTag({ property: 'og:title', content: 'Handyman Services Rhode Island | PVD Solutions' }, "property='og:title'")
-    this.meta.updateTag({ property: 'og:url', content: 'https://pvd-solutions.com/' })
-    this.meta.updateTag({ property: 'og:description', content: 'Handyman repairs, comprehensive remodeling and thorough cleaning services.' }, "property='og:description'")
+    this.titleService.setTitle('Chubby Designs | Website Design in San Antonio TX')
+    this.meta.updateTag({ name: 'description', content: 'Helping smaller businesses obtain a website at a realistic cost that is more affordable and straight forward. We offer custom web design that makes the process seamless and hassle free. Contact us today!' })
+    this.meta.updateTag({ property: 'og:image', content: 'https://www.chubbydesigns.com/assets/banner.png' }, "property='og:image'")
+    this.meta.updateTag({ property: 'og:title', content: 'Chubby Designs | Website Design in San Antonio TX' }, "property='og:title'")
+    this.meta.updateTag({ property: 'og:description', content: 'Helping smaller businesses obtain a website at a realistic cost that is more affordable and straight forward. We offer custom web design that makes the process seamless and hassle free. Contact us today!' }, "property='og:description'")
+    this.meta.updateTag({ property: 'og:url', content: 'https://www.chubbydesigns.com/home' }, "property='og:url'")
   }
 }
