@@ -1,5 +1,5 @@
 import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core'
-import { provideRouter, withInMemoryScrolling } from '@angular/router'
+import { provideRouter, withInMemoryScrolling, withViewTransitions } from '@angular/router'
 
 import { routes } from './app.routes'
 import { provideClientHydration, withI18nSupport } from '@angular/platform-browser'
@@ -8,5 +8,5 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 export const appConfig: ApplicationConfig = {
   providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes, withInMemoryScrolling({
     scrollPositionRestoration: "top"
-  })), provideClientHydration(withI18nSupport()), provideAnimationsAsync()]
-};
+  }), withViewTransitions()), provideClientHydration(withI18nSupport()), provideAnimationsAsync()]
+}

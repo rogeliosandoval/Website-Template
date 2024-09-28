@@ -39,3 +39,15 @@ html, body {
     line-height: 1.6;
   }
 }
+
+::view-transition-old(root) {
+  animation-duration: 0.5s;
+}
+
+::view-transition-new(root) {
+  animation-duration: 0.5s;
+}
+
+.mdc-tooltip__surface {
+  background-color: black !important;
+}
