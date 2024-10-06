@@ -1,1 +1,1 @@
-WIP
+Website Skeleton
