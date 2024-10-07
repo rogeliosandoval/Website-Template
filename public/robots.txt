@@ -1,4 +1,4 @@
 User-agent: *
-Disallow: /admin/
+Disallow: /directory you don't want crawled if not then just remove this entirely/
 Allow: /
 Sitemap: https://www.chubbydesigns.com/sitemap.xml
