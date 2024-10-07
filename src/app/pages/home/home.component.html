@@ -1,6 +1,6 @@
 <section class="cta">
   <!--[controls]="true"-->
-  <video [muted]="'muted'" autoplay loop playsInline>
+  <video [muted]="true" autoplay loop playsInline onloadedmetadata="this.muted = true" oncanplay="this.play()">
     <source src="assets/videos/junk-yard.mp4" type="video/mp4"/>
   </video>
   <div class="cta-overlay"></div>
